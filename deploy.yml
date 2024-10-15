@@ -1,13 +1,14 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   labels:
-    app: flappy
-  name: flappy-deploy
+    app: train
+  name: movies-deploy
 spec:
+  replicas: 4
   selector:
     matchLabels:
-      app: flappy
+      app: train
   template:
     metadata:
       labels:
@@ -26,7 +27,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: flappybird
+    app: train
   ports:
     - port: 80
       targetPort: 80
