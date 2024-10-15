@@ -1,17 +1,17 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deamonset
 metadata:
   labels:
-    app: flappybird
-  name: flappybird-deploy
+    app: flappy bird
+  name: flappy-deploy
 spec:
   selector:
     matchLabels:
-      app: flappybird
+      app: flappy
   template:
     metadata:
       labels:
-        app: flappybird
+        app: flappy
     spec:
       containers:
       - name: cont1
@@ -26,7 +26,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: flappybird
+    app: flappy
   ports:
     - port: 80
       targetPort: 80
