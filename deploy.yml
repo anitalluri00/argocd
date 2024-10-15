@@ -1,11 +1,10 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   labels:
     app: train
   name: movies-deploy
 spec:
-  replicas: 4
   selector:
     matchLabels:
       app: train
