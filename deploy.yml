@@ -2,17 +2,16 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   labels:
-    app: train
-  name: movies-deploy
+    app: flappybird
+  name: flappy-deploy
 spec:
-  replicas: 4
   selector:
     matchLabels:
-      app: train
+      app: flappybird
   template:
     metadata:
       labels:
-        app: train
+        app: flappybird
     spec:
       containers:
       - name: cont1
