@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: anitalluri00/phishing-detector-qs
+        image: anitalluri00/phishing-detection-ps
         ports:
           - containerPort: 5000
 ---
