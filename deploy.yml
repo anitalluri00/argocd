@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: phd
-  name: phd
+  name: phd-deploy
 spec:
   replicas: 5
   selector:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: swiggy
+        app: phd
     spec:
       containers:
       - name: cont1
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: phd
+  name: abc
 spec:
   type: LoadBalancer
   selector:
