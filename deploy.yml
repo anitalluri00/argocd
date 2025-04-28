@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: phd
-  name: phd-deploy
+  name: phd
 spec:
   replicas: 5
   selector:
