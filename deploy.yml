@@ -1,11 +1,10 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   labels:
     app: phd
   name: phd-deploy
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: phd
